@@ -1,0 +1,60 @@
+#include "nu32dip.h" // constants, functions for startup and UART
+#include <math.h>
+
+#define PI 3.14159265
+
+int x = 5;
+int t = 500;
+
+void blink(int, int); // blink the LEDs function
+
+int main(void) {
+  char message[100];
+  
+  NU32DIP_Startup(); // cache on, interrupts on, LED/button init, UART init
+  while (1) {
+//    NU32DIP_ReadUART1(message, 100); // wait here until get message from computer
+//    sscanf(message, "%d", &x);
+//    NU32DIP_ReadUART1(message, 100); // wait here until get message from computer
+//    sscanf(message, "%d", &t);
+//    sprintf(message,"%d %d \r\n", x, t);
+//    NU32DIP_WriteUART1(message); // send message back
+//    NU32DIP_WriteUART1("\r\n"); // carriage return and newline
+//	if (NU32DIP_USER){
+//		blink(x, t); // 5 times, 500ms each time
+//	}
+    if(NU32DIP_USER==0){ 
+      int i = 0;
+      for(i = 0; i<100; i++){
+          sprintf(message,"%f\r\n",sin(i/100.0*PI*2)*1.5+1.5);
+          NU32DIP_WriteUART1(message); 
+          _CP0_SET_COUNT(0);
+          while(_CP0_GET_COUNT()<24000){}
+          
+      }
+      _CP0_SET_COUNT(0);
+      while(_CP0_GET_COUNT()<24000000){}
+    }
+  }
+}
+
+// blink the LEDs
+void blink(int iterations, int time_ms){
+	int i;
+	unsigned int t;
+	for (i=0; i< iterations; i++){
+		NU32DIP_GREEN = 0; // on
+		NU32DIP_YELLOW = 1; // off
+		t = _CP0_GET_COUNT(); // should really check for overflow here
+		// the core timer ticks at half the SYSCLK, so 24000000 times per second
+		// so each millisecond is 24000 ticks
+		// wait half in each delay
+		while(_CP0_GET_COUNT() < t + 12000*time_ms){}
+		
+		NU32DIP_GREEN = 1; // off
+		NU32DIP_YELLOW = 0; // on
+		t = _CP0_GET_COUNT(); // should really check for overflow here
+		while(_CP0_GET_COUNT() < t + 12000*time_ms){}
+	}
+}
+		
