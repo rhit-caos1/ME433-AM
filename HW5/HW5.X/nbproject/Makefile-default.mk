@@ -51,17 +51,17 @@ OBJECTDIR=build/${CND_CONF}/${IMAGE_TYPE}
 DISTDIR=dist/${CND_CONF}/${IMAGE_TYPE}
 
 # Source Files Quoted if spaced
-SOURCEFILES_QUOTED_IF_SPACED=../HW5.c ../nu32dip.c ../spi.c
+SOURCEFILES_QUOTED_IF_SPACED=../nu32dip.c ../spi.c ../HW5.c
 
 # Object Files Quoted if spaced
-OBJECTFILES_QUOTED_IF_SPACED=${OBJECTDIR}/_ext/1472/HW5.o ${OBJECTDIR}/_ext/1472/nu32dip.o ${OBJECTDIR}/_ext/1472/spi.o
-POSSIBLE_DEPFILES=${OBJECTDIR}/_ext/1472/HW5.o.d ${OBJECTDIR}/_ext/1472/nu32dip.o.d ${OBJECTDIR}/_ext/1472/spi.o.d
+OBJECTFILES_QUOTED_IF_SPACED=${OBJECTDIR}/_ext/1472/nu32dip.o ${OBJECTDIR}/_ext/1472/spi.o ${OBJECTDIR}/_ext/1472/HW5.o
+POSSIBLE_DEPFILES=${OBJECTDIR}/_ext/1472/nu32dip.o.d ${OBJECTDIR}/_ext/1472/spi.o.d ${OBJECTDIR}/_ext/1472/HW5.o.d
 
 # Object Files
-OBJECTFILES=${OBJECTDIR}/_ext/1472/HW5.o ${OBJECTDIR}/_ext/1472/nu32dip.o ${OBJECTDIR}/_ext/1472/spi.o
+OBJECTFILES=${OBJECTDIR}/_ext/1472/nu32dip.o ${OBJECTDIR}/_ext/1472/spi.o ${OBJECTDIR}/_ext/1472/HW5.o
 
 # Source Files
-SOURCEFILES=../HW5.c ../nu32dip.c ../spi.c
+SOURCEFILES=../nu32dip.c ../spi.c ../HW5.c
 
 
 
@@ -121,12 +121,6 @@ endif
 # ------------------------------------------------------------------------------------
 # Rules for buildStep: compile
 ifeq ($(TYPE_IMAGE), DEBUG_RUN)
-${OBJECTDIR}/_ext/1472/HW5.o: ../HW5.c  .generated_files/flags/default/344e2b146ae2a22bba170441f4997adf451609f1 .generated_files/flags/default/da39a3ee5e6b4b0d3255bfef95601890afd80709
-	@${MKDIR} "${OBJECTDIR}/_ext/1472" 
-	@${RM} ${OBJECTDIR}/_ext/1472/HW5.o.d 
-	@${RM} ${OBJECTDIR}/_ext/1472/HW5.o 
-	${MP_CC}  $(MP_EXTRA_CC_PRE) -g -D__DEBUG   -fframe-base-loclist  -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -fno-common -MP -MMD -MF "${OBJECTDIR}/_ext/1472/HW5.o.d" -o ${OBJECTDIR}/_ext/1472/HW5.o ../HW5.c    -DXPRJ_default=$(CND_CONF)    $(COMPARISON_BUILD)  -mdfp="${DFP_DIR}"  
-	
 ${OBJECTDIR}/_ext/1472/nu32dip.o: ../nu32dip.c  .generated_files/flags/default/fad4bc8f2b45e7645b8679797671a405e01f1aff .generated_files/flags/default/da39a3ee5e6b4b0d3255bfef95601890afd80709
 	@${MKDIR} "${OBJECTDIR}/_ext/1472" 
 	@${RM} ${OBJECTDIR}/_ext/1472/nu32dip.o.d 
@@ -139,13 +133,13 @@ ${OBJECTDIR}/_ext/1472/spi.o: ../spi.c  .generated_files/flags/default/cefe61b40
 	@${RM} ${OBJECTDIR}/_ext/1472/spi.o 
 	${MP_CC}  $(MP_EXTRA_CC_PRE) -g -D__DEBUG   -fframe-base-loclist  -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -fno-common -MP -MMD -MF "${OBJECTDIR}/_ext/1472/spi.o.d" -o ${OBJECTDIR}/_ext/1472/spi.o ../spi.c    -DXPRJ_default=$(CND_CONF)    $(COMPARISON_BUILD)  -mdfp="${DFP_DIR}"  
 	
-else
-${OBJECTDIR}/_ext/1472/HW5.o: ../HW5.c  .generated_files/flags/default/d1507259b13726fd9564cdcd8cc093862ae8c4e8 .generated_files/flags/default/da39a3ee5e6b4b0d3255bfef95601890afd80709
+${OBJECTDIR}/_ext/1472/HW5.o: ../HW5.c  .generated_files/flags/default/344e2b146ae2a22bba170441f4997adf451609f1 .generated_files/flags/default/da39a3ee5e6b4b0d3255bfef95601890afd80709
 	@${MKDIR} "${OBJECTDIR}/_ext/1472" 
 	@${RM} ${OBJECTDIR}/_ext/1472/HW5.o.d 
 	@${RM} ${OBJECTDIR}/_ext/1472/HW5.o 
-	${MP_CC}  $(MP_EXTRA_CC_PRE)  -g -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -fno-common -MP -MMD -MF "${OBJECTDIR}/_ext/1472/HW5.o.d" -o ${OBJECTDIR}/_ext/1472/HW5.o ../HW5.c    -DXPRJ_default=$(CND_CONF)    $(COMPARISON_BUILD)  -mdfp="${DFP_DIR}"  
+	${MP_CC}  $(MP_EXTRA_CC_PRE) -g -D__DEBUG   -fframe-base-loclist  -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -fno-common -MP -MMD -MF "${OBJECTDIR}/_ext/1472/HW5.o.d" -o ${OBJECTDIR}/_ext/1472/HW5.o ../HW5.c    -DXPRJ_default=$(CND_CONF)    $(COMPARISON_BUILD)  -mdfp="${DFP_DIR}"  
 	
+else
 ${OBJECTDIR}/_ext/1472/nu32dip.o: ../nu32dip.c  .generated_files/flags/default/97ef5a8c3b5bed75f40a65f9fc6bef5cb6e14292 .generated_files/flags/default/da39a3ee5e6b4b0d3255bfef95601890afd80709
 	@${MKDIR} "${OBJECTDIR}/_ext/1472" 
 	@${RM} ${OBJECTDIR}/_ext/1472/nu32dip.o.d 
@@ -157,6 +151,12 @@ ${OBJECTDIR}/_ext/1472/spi.o: ../spi.c  .generated_files/flags/default/ce5d77ffd
 	@${RM} ${OBJECTDIR}/_ext/1472/spi.o.d 
 	@${RM} ${OBJECTDIR}/_ext/1472/spi.o 
 	${MP_CC}  $(MP_EXTRA_CC_PRE)  -g -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -fno-common -MP -MMD -MF "${OBJECTDIR}/_ext/1472/spi.o.d" -o ${OBJECTDIR}/_ext/1472/spi.o ../spi.c    -DXPRJ_default=$(CND_CONF)    $(COMPARISON_BUILD)  -mdfp="${DFP_DIR}"  
+	
+${OBJECTDIR}/_ext/1472/HW5.o: ../HW5.c  .generated_files/flags/default/d1507259b13726fd9564cdcd8cc093862ae8c4e8 .generated_files/flags/default/da39a3ee5e6b4b0d3255bfef95601890afd80709
+	@${MKDIR} "${OBJECTDIR}/_ext/1472" 
+	@${RM} ${OBJECTDIR}/_ext/1472/HW5.o.d 
+	@${RM} ${OBJECTDIR}/_ext/1472/HW5.o 
+	${MP_CC}  $(MP_EXTRA_CC_PRE)  -g -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -fno-common -MP -MMD -MF "${OBJECTDIR}/_ext/1472/HW5.o.d" -o ${OBJECTDIR}/_ext/1472/HW5.o ../HW5.c    -DXPRJ_default=$(CND_CONF)    $(COMPARISON_BUILD)  -mdfp="${DFP_DIR}"  
 	
 endif
 
