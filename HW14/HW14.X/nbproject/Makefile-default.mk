@@ -51,17 +51,17 @@ OBJECTDIR=build/${CND_CONF}/${IMAGE_TYPE}
 DISTDIR=dist/${CND_CONF}/${IMAGE_TYPE}
 
 # Source Files Quoted if spaced
-SOURCEFILES_QUOTED_IF_SPACED=../nu32dip.c HW14.c
+SOURCEFILES_QUOTED_IF_SPACED=../nu32dip.c ../HW14.c
 
 # Object Files Quoted if spaced
-OBJECTFILES_QUOTED_IF_SPACED=${OBJECTDIR}/_ext/1472/nu32dip.o ${OBJECTDIR}/HW14.o
-POSSIBLE_DEPFILES=${OBJECTDIR}/_ext/1472/nu32dip.o.d ${OBJECTDIR}/HW14.o.d
+OBJECTFILES_QUOTED_IF_SPACED=${OBJECTDIR}/_ext/1472/nu32dip.o ${OBJECTDIR}/_ext/1472/HW14.o
+POSSIBLE_DEPFILES=${OBJECTDIR}/_ext/1472/nu32dip.o.d ${OBJECTDIR}/_ext/1472/HW14.o.d
 
 # Object Files
-OBJECTFILES=${OBJECTDIR}/_ext/1472/nu32dip.o ${OBJECTDIR}/HW14.o
+OBJECTFILES=${OBJECTDIR}/_ext/1472/nu32dip.o ${OBJECTDIR}/_ext/1472/HW14.o
 
 # Source Files
-SOURCEFILES=../nu32dip.c HW14.c
+SOURCEFILES=../nu32dip.c ../HW14.c
 
 
 
@@ -127,11 +127,11 @@ ${OBJECTDIR}/_ext/1472/nu32dip.o: ../nu32dip.c  .generated_files/flags/default/4
 	@${RM} ${OBJECTDIR}/_ext/1472/nu32dip.o 
 	${MP_CC}  $(MP_EXTRA_CC_PRE) -g -D__DEBUG   -fframe-base-loclist  -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -fno-common -MP -MMD -MF "${OBJECTDIR}/_ext/1472/nu32dip.o.d" -o ${OBJECTDIR}/_ext/1472/nu32dip.o ../nu32dip.c    -DXPRJ_default=$(CND_CONF)    $(COMPARISON_BUILD)  -mdfp="${DFP_DIR}"  
 	
-${OBJECTDIR}/HW14.o: HW14.c  .generated_files/flags/default/b0d6ae0717645472e04eacce97023a5a171784b0 .generated_files/flags/default/da39a3ee5e6b4b0d3255bfef95601890afd80709
-	@${MKDIR} "${OBJECTDIR}" 
-	@${RM} ${OBJECTDIR}/HW14.o.d 
-	@${RM} ${OBJECTDIR}/HW14.o 
-	${MP_CC}  $(MP_EXTRA_CC_PRE) -g -D__DEBUG   -fframe-base-loclist  -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -fno-common -MP -MMD -MF "${OBJECTDIR}/HW14.o.d" -o ${OBJECTDIR}/HW14.o HW14.c    -DXPRJ_default=$(CND_CONF)    $(COMPARISON_BUILD)  -mdfp="${DFP_DIR}"  
+${OBJECTDIR}/_ext/1472/HW14.o: ../HW14.c  .generated_files/flags/default/b05d16c0c8de1c744bd0efd940165b0c3a293f00 .generated_files/flags/default/da39a3ee5e6b4b0d3255bfef95601890afd80709
+	@${MKDIR} "${OBJECTDIR}/_ext/1472" 
+	@${RM} ${OBJECTDIR}/_ext/1472/HW14.o.d 
+	@${RM} ${OBJECTDIR}/_ext/1472/HW14.o 
+	${MP_CC}  $(MP_EXTRA_CC_PRE) -g -D__DEBUG   -fframe-base-loclist  -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -fno-common -MP -MMD -MF "${OBJECTDIR}/_ext/1472/HW14.o.d" -o ${OBJECTDIR}/_ext/1472/HW14.o ../HW14.c    -DXPRJ_default=$(CND_CONF)    $(COMPARISON_BUILD)  -mdfp="${DFP_DIR}"  
 	
 else
 ${OBJECTDIR}/_ext/1472/nu32dip.o: ../nu32dip.c  .generated_files/flags/default/bde8a2f7f5c81e91826558075c3bf3febbb21b9b .generated_files/flags/default/da39a3ee5e6b4b0d3255bfef95601890afd80709
@@ -140,11 +140,11 @@ ${OBJECTDIR}/_ext/1472/nu32dip.o: ../nu32dip.c  .generated_files/flags/default/b
 	@${RM} ${OBJECTDIR}/_ext/1472/nu32dip.o 
 	${MP_CC}  $(MP_EXTRA_CC_PRE)  -g -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -fno-common -MP -MMD -MF "${OBJECTDIR}/_ext/1472/nu32dip.o.d" -o ${OBJECTDIR}/_ext/1472/nu32dip.o ../nu32dip.c    -DXPRJ_default=$(CND_CONF)    $(COMPARISON_BUILD)  -mdfp="${DFP_DIR}"  
 	
-${OBJECTDIR}/HW14.o: HW14.c  .generated_files/flags/default/d3e44bf4173198233e36f3af8c9449fd544aa488 .generated_files/flags/default/da39a3ee5e6b4b0d3255bfef95601890afd80709
-	@${MKDIR} "${OBJECTDIR}" 
-	@${RM} ${OBJECTDIR}/HW14.o.d 
-	@${RM} ${OBJECTDIR}/HW14.o 
-	${MP_CC}  $(MP_EXTRA_CC_PRE)  -g -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -fno-common -MP -MMD -MF "${OBJECTDIR}/HW14.o.d" -o ${OBJECTDIR}/HW14.o HW14.c    -DXPRJ_default=$(CND_CONF)    $(COMPARISON_BUILD)  -mdfp="${DFP_DIR}"  
+${OBJECTDIR}/_ext/1472/HW14.o: ../HW14.c  .generated_files/flags/default/75d3a8e1a33101d394e17acf0d50f512e4ecbd25 .generated_files/flags/default/da39a3ee5e6b4b0d3255bfef95601890afd80709
+	@${MKDIR} "${OBJECTDIR}/_ext/1472" 
+	@${RM} ${OBJECTDIR}/_ext/1472/HW14.o.d 
+	@${RM} ${OBJECTDIR}/_ext/1472/HW14.o 
+	${MP_CC}  $(MP_EXTRA_CC_PRE)  -g -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -fno-common -MP -MMD -MF "${OBJECTDIR}/_ext/1472/HW14.o.d" -o ${OBJECTDIR}/_ext/1472/HW14.o ../HW14.c    -DXPRJ_default=$(CND_CONF)    $(COMPARISON_BUILD)  -mdfp="${DFP_DIR}"  
 	
 endif
 
