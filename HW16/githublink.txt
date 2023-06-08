@@ -1,1 +1,2 @@
-https://github.com/ndm736/ME433_2023/wiki/HW16
+
+https://github.com/rhit-caos1/ME433_AM/tree/main/HW16
